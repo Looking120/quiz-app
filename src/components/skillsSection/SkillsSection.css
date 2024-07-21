@@ -1,0 +1,113 @@
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 350px); 
+    column-gap: 3rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.skills-content {
+    background-color: var(--container-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 2rem 4rem;
+    border-radius: 1.25rem;
+}
+
+.skills-title {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    text-align: center;
+    margin-bottom: var(--mb-1-5);
+}
+
+.skills-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+    column-gap: 2rem; /* Espacement entre les colonnes */
+}
+
+.skills-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Optionnel : ajout d'une ligne sous chaque item */
+    padding-bottom: 0.5rem; /* Optionnel : ajout de padding sous chaque item */
+}
+
+.skills-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Ajuste l'espacement entre les groupes */
+}
+
+.skills-name {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    line-height: 18px;
+}
+
+.skills-level {
+    font-size: var(--tiny-font-size);
+}
+
+/* For large devices */
+@media screen and (max-width: 992px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr); /* Ajustement pour les grands appareils */
+    }
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: 1fr; /* Une seule colonne pour les appareils moyens */
+        column-gap: 1rem; /* Réduction de l'espacement des colonnes */
+    }
+
+    .skills-content {
+        padding: 1.5rem 3rem; /* Ajustement du padding */
+    }
+
+    .skills-box {
+        grid-template-columns: 1fr; /* Une seule colonne dans la skills box */
+        column-gap: 1rem; /* Réduction de l'espacement des colonnes */
+    }
+}
+
+/* For small devices */
+@media screen and (max-width: 576px) {
+    .skills-container {
+        margin-top: 1rem; /* Réduction de la marge supérieure */
+    }
+
+    .skills-content {
+        padding: 1rem 2rem; /* Réduction du padding */
+    }
+
+    .skills-title {
+        font-size: var(--small-font-size); /* Réduction de la taille de la police */
+    }
+
+    .skills-box {
+        grid-template-columns: 1fr; /* Une seule colonne dans la skills box */
+    }
+}
+
+/* For very small devices */
+@media screen and (max-width: 350px) {
+    .skills-container {
+        margin-top: 0.5rem; /* Réduction supplémentaire de la marge supérieure */
+    }
+
+    .skills-content {
+        padding: 0.5rem 1rem; /* Réduction supplémentaire du padding */
+    }
+
+    .skills-title {
+        font-size: var(--tiny-font-size); /* Réduction supplémentaire de la taille de la police */
+    }
+
+    .skills-box {
+        grid-template-columns: 1fr; /* Une seule colonne dans la skills box */
+    }
+}
